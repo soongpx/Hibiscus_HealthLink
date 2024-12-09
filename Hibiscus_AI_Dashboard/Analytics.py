@@ -12,7 +12,8 @@ fb_credentials = {}
 fb_credentials = st.secrets["firebase"]['my_project_settings']
 
 if not firebase_admin._apps:
-    firebase_admin.initialize_app(fb_credentials)
+    creds = credentials.Certificate(fb_credentials)
+    firebase_admin.initialize_app(creds)
 db = firestore.client()
 
 
