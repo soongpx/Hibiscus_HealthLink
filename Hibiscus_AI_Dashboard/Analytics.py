@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import datetime
 
 # ------------------------ Initialize Firebase ------------------------
+fb_credentials = {}
 fb_credentials = st.secrets["firebase"]['my_project_settings']
 
 if not firebase_admin._apps:
