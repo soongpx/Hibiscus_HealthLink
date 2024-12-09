@@ -1,0 +1,5 @@
+firebase_admin 
+pandas
+plotly
+seaborn
+matplotlib
