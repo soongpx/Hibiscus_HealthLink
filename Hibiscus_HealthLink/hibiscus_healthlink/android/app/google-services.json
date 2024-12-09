@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "57751856444",
+    "project_id": "hibiscusdatabase",
+    "storage_bucket": "hibiscusdatabase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57751856444:android:f7e02135ac6fafb7c52a39",
+        "android_client_info": {
+          "package_name": "com.example.hibiscus_healthlink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6aXnrj1N9dafBcuFDTMGTJkdrl6QJUVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
