@@ -9,7 +9,7 @@ import datetime
 
 # ------------------------ Initialize Firebase ------------------------
 cred = credentials.Certificate(
-    'C:\\Users\\ASUS\\PycharmProjects\\Hibiscus_AI\\hibiscusdatabase-firebase-adminsdk-j806q-bfad0f328d.json'
+    'hibiscusdatabase-firebase-adminsdk-j806q-bfad0f328d.json'
 )
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
