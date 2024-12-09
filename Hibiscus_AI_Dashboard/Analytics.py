@@ -8,11 +8,10 @@ import matplotlib.pyplot as plt
 import datetime
 
 # ------------------------ Initialize Firebase ------------------------
-cred = credentials.Certificate(
-    'hibiscusdatabase-firebase-adminsdk-j806q-bfad0f328d.json'
-)
+fb_credentials = st.secrets["firebase"]['my_project_settings']
+
 if not firebase_admin._apps:
-    firebase_admin.initialize_app(cred)
+    firebase_admin.initialize_app(fb_credentials)
 db = firestore.client()
 
 
