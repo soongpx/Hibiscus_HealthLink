@@ -8,12 +8,22 @@ import matplotlib.pyplot as plt
 import datetime
 
 # ------------------------ Initialize Firebase ------------------------
-fb_credentials = {}
-fb_credentials = st.secrets["firebase"]['my_project_settings']
-
 if not firebase_admin._apps:
-    creds = credentials.Certificate(fb_credentials)
+    fb_credentials = st.secrets["firebase"]
+    creds = credentials.Certificate({
+        "type": fb_credentials["type"],
+        "project_id": fb_credentials["project_id"],
+        "private_key_id": fb_credentials["private_key_id"],
+        "private_key": fb_credentials["private_key"],
+        "client_email": fb_credentials["client_email"],
+        "client_id": fb_credentials["client_id"],
+        "auth_uri": fb_credentials["auth_uri"],
+        "token_uri": fb_credentials["token_uri"],
+        "auth_provider_x509_cert_url": fb_credentials["auth_provider_x509_cert_url"],
+        "client_x509_cert_url": fb_credentials["client_x509_cert_url"]
+    })
     firebase_admin.initialize_app(creds)
+
 db = firestore.client()
 
 
