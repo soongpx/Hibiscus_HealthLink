@@ -30,7 +30,13 @@ db = firestore.client()
 # ------------------------ Fetch Data ------------------------
 @st.cache_data
 def fetch_health_data(user_id, collection_name):
-    docs = db.collection('users').document(user_id).collection(collection_name).stream()
+    try:
+        doc_ref = db.collection('users').document(user_id).collection('heartRates').limit(1).stream()
+        for doc in doc_ref:
+            st.write(doc.to_dict())
+    except Exception as e:
+        st.error(f"Firestore fetch error: {e}")
+        docs = db.collection('users').document(user_id).collection(collection_name).stream()
     data = []
     for doc in docs:
         entry = doc.to_dict()
