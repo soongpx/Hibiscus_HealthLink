@@ -9,7 +9,7 @@ import datetime
 
 # ------------------------ Initialize Firebase ------------------------
 if not firebase_admin._apps:
-    fb_credentials = st.secrets["firebase"]["project setting"]
+    fb_credentials = st.secrets["firebase"]
     creds = credentials.Certificate({
         "type": fb_credentials["type"],
         "project_id": fb_credentials["project_id"],
